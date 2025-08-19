@@ -5,39 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signment</title>
+    <style>
+        label{color:red;}
+    </style>
+    <!-- 내부스타일 -->
+    <!-- <style></style>로 표현하여 각 라벨의 태그를 지정하여 스타일을 정할수 있다. -->
+    <!-- 일괄적으로 적용 가능, 편리함, 많이 사용된다. -->
+    
+    <!-- 외부스타일 -->
+    <!-- css파일을 link태그를 통해 외부에서 지정하여 스타일적용 -->
+    <!-- 내부, 외부, 인라인을 모두 작성한다면 우선순위는 인라인 > 내부 > 외부 -->
+
+    <!-- content-> width, height 크기를 나타냄 -->
+    <!-- padding-> 영역을 가질 수 있다 -> 색을 넣을 수 있다. padding-top:10px, padding-right:10px, padding-bottom:10px과 같이 지정가능 -->
+    <!-- border-> border:2px solid red; = 너비, 선하나, 색; -->
+    <!-- border - content = padding -->
+    <!-- margin = border바깥부분, 다른 부분과의 간격, 요소와 요소 사이의 간격 -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
+    <div id="wrapper" class="wrapper">
         <!-- div태그는 내부에 또다른 태그나 값을 넣기 전까지 영역과 공간을 가지지 않는다. -->
-        <form action="">
+        <form id="registrationFrom" class="registrationFrom">
             <!-- form태그는 웹브라우저(프론트엔드)에서 웹서버(백엔드)로 데이터를 넘기고자할 때 -->
             <!-- input태그와 같이 작성하는 태그 -->
             <h2>signment</h2>
-            <div>
-                <label for="nickname">username</label>
-                <input type="text">
-                <span>알림</span>
+            <div class="inputGroup">
+                <label style='color:blue;' for="nickname">username</label>
+                <!-- inline style 인라인 스타일 앞태그 안에 지정 -->
+                <!-- style='key:value;' -->
+                <input type="text" id="nickname" class="nicknameInput">
+                <span class="helperText">알림</span>
             </div>
             <div>
                 <label for="userEmail">email</label>
-                <input type="email">
-                <span>알림</span>
+                <input type="email" id="email" class="emailInput">
+                <span class="helperText">알림</span>
                 <!-- span태그 = 글자표현 -->
             </div>
             <div>
                 <label for="userPassword">password</label>
-                <input type="password">
-                <span>알림</span>
+                <input type="password" id="userPassword" class="passwordInput">
+                <span class="helperText">알림</span>
             </div>
             <div>
                 <label for="confirmPassword">confirmPassword</label>
-                <input type="password">
-                <span>알림</span>
+                <input type="password" id="confirmPassword" class="confirmInput">
+                <span class="helperText">알림</span>
             </div>
             <div>
                 <label for="phone">phone</label>
-                <input type="tel">
-                <span>010-0000-0000</span>
+                <input type="tel" id="phone" class="phoneInput">
+                <span class="helperText">010-0000-0000</span>
             </div>
             <button type="submit">등록완료</button>
         </form>
