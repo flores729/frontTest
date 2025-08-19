@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signment</title>
     <style>
-        label{color:red;}
+        label{color:black;}
     </style>
     <!-- 내부스타일 -->
     <!-- <style></style>로 표현하여 각 라벨의 태그를 지정하여 스타일을 정할수 있다. -->
@@ -26,35 +26,35 @@
 <body>
     <div id="wrapper" class="wrapper">
         <!-- div태그는 내부에 또다른 태그나 값을 넣기 전까지 영역과 공간을 가지지 않는다. -->
-        <form id="registrationFrom" class="registrationFrom">
+        <form id="registrationForm" class="registrationFrom">
             <!-- form태그는 웹브라우저(프론트엔드)에서 웹서버(백엔드)로 데이터를 넘기고자할 때 -->
             <!-- input태그와 같이 작성하는 태그 -->
-            <h2>signment</h2>
+            <h2>회원등록</h2>
             <div class="inputGroup">
-                <label style='color:blue;' for="nickname">username</label>
+                <label style='color:black;' for="nickname">사용자이름</label>
                 <!-- inline style 인라인 스타일 앞태그 안에 지정 -->
                 <!-- style='key:value;' -->
                 <input type="text" id="nickname" class="nicknameInput">
                 <span class="helperText">알림</span>
             </div>
-            <div>
-                <label for="userEmail">email</label>
+            <div class="inputGroup">
+                <label for="userEmail">이메일</label>
                 <input type="email" id="email" class="emailInput">
                 <span class="helperText">알림</span>
                 <!-- span태그 = 글자표현 -->
             </div>
-            <div>
-                <label for="userPassword">password</label>
+            <div class="inputGroup">
+                <label for="userPassword">비밀번호</label>
                 <input type="password" id="userPassword" class="passwordInput">
                 <span class="helperText">알림</span>
             </div>
-            <div>
-                <label for="confirmPassword">confirmPassword</label>
-                <input type="password" id="confirmPassword" class="confirmInput">
+            <div class="inputGroup">
+                <label for="confirmPassword">비밀번호 확인</label>
+                <input type="password" id="confirmPassword" class="confirmPasswordInput">
                 <span class="helperText">알림</span>
             </div>
-            <div>
-                <label for="phone">phone</label>
+            <div class="inputGroup">
+                <label for="phone">전화번호</label>
                 <input type="tel" id="phone" class="phoneInput">
                 <span class="helperText">010-0000-0000</span>
             </div>
