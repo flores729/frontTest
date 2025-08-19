@@ -1,0 +1,30 @@
+/* css 레이아웃 구성 */
+/* display */
+/* 레이아웃의 공간과 영역을 표현하는 용어, 영역은 2차원을 의미, 공간은 3차원을 의미*/
+/* 
+label{
+    display: inline or none or block or inline-block
+} 
+*/
+/* 2차원=inline 3차원=block */
+/* 2차원 - inline, none */
+/* 3차원 - block, inline-block */
+
+/* position */
+/* 요소의 위치를 지정하게 해준다 */
+/* 특정 위치로 요소를 배치할 수 있게 한다. */
+/* 
+label{
+    position:static or relative or absolute or fixed
+} 
+*/
+/* static => default 기능없음 기본적인 흐름에 맞춰서 배치된다. 좌표지정이 불가능하다. top, bottom과 같은 키워드 사용*/
+/* relative => 원래있던 위치 기반 상대적 이동가능 top, bottom, right, left : px로 지정해서 이동*/
+/* absolute => 부모 위치 기반 상대적 이동가능 단 부모 요소가 static이 아닌경우에만 좌표값 설정 가능*/
+/* fixed => */
+
+/* flex */
+/* 부모 + 자식 으로 이루어진 기능 */
+/* 부모 = 기능 정의 */
+/* 자식 = 기능 호출 */
+/* 부모에 기본적인 정보를 저장해두면 자식을 생성 시 자동으로 적용된다. */
