@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fetch API 테스트</title>
+</head>
+<body>
+    <h1>API 요청 테스트</h1>
+    <script>
+        fetch("https://korean-advice-open-api.vercel.app/api/advice", { method: 'GET' })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("network error");
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log("성공:", data);
+                // HTML 본문에 결과 표시
+                document.body.append(JSON.stringify(data));
+            })
+            .catch(error => {
+                console.log("fetch error:", error);
+            });
+            
+        fetch("https://korean-advice-open-api.vercel.app/api/advice", { method: 'POST',
+            headers : {'Content-Type' : 'application/json'},
+            body : JSON.stringify({name : 'black',
+            age : 32,}) 
+            }).then(response => {
+                if (!response.ok) {
+                    throw new Error("network error");
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log("성공:", data);
+                // HTML 본문에 결과 표시
+                document.body.append(JSON.stringify(data));
+            })
+            .catch(error => {
+                console.log("fetch error:", error);
+            });
+    </script>
+</body>
+</html>
